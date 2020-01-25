@@ -40,7 +40,7 @@ public class DateTimeExample {
 		/* date and time classes are immutable like String class
 		 * so when using date time methods, we need to assign the results to a reference variable
 		 */
-		LocalDate date = LocalDate.of(2021, Month.JANUARY, 20);
+		LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
 		System.out.println("date : " + date);
 		System.out.println("// adding 2 days to date");
 		// adding two days to date, and assign the reference of the new object created to date variable
