@@ -11,6 +11,7 @@ public class DateTimeExample {
 	public static void main(String[] args) {
 		
 		System.out.println("----------- JAVA 7 DateTime Operations ---------------");
+		System.out.println("______________________________________________________");
 		System.out.println("Creating an object with current date and time : ");
 		Date currentDateJava7= new Date();
 		System.out.println(currentDateJava7);
@@ -24,6 +25,7 @@ public class DateTimeExample {
 		System.out.println("--------------------------------------------------");
 		
 		System.out.println("----------- JAVA 8 DateTime Operations ---------------");
+		System.out.println("______________________________________________________");
 		System.out.println("Creating an object with current date : ");
 		LocalDate currentDateJava8 = LocalDate.now();
 		System.out.println(currentDateJava8);
