@@ -2,7 +2,9 @@ package com.datetime.example;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -61,6 +63,28 @@ public class DateTimeExample {
 		System.out.println("// adding 3 years to date");
 		date = date.plusYears(3);
 		System.out.println(date);
+		
+		System.out.println("// extracting informations from a date without DateTimeFormatter : ");
+		LocalDate date26022020 = LocalDate.of(2020, Month.FEBRUARY, 26);
+		System.out.println("------------------------------------------");
+		System.out.println("Date is 26/02/2020");
+		System.out.println("Day of week : " + date26022020.getDayOfWeek());
+		System.out.println("Month : " + date26022020.getMonth());
+		System.out.println("Year : " + date26022020.getYear());
+		System.out.println("Day of year : " + date26022020.getDayOfYear());
+		
+		System.out.println("// Formatting a DateTime with a specific pattern");
+		LocalDateTime dateTime = LocalDateTime.of(date26022020, LocalTime.of(21, 06));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
+		System.out.println(dateTime.format(formatter));
+		
+		System.out.println("// Parsing a Date with specific pattern : ");
+		
+		DateTimeFormatter f = DateTimeFormatter.ofPattern("MM dd yyyy");
+		LocalTime time = LocalTime.parse("22:01");
+		System.out.println(date26022020);
+		System.out.println(time);
+		
 	}
 
 }
